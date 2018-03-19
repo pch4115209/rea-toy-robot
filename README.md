@@ -15,6 +15,7 @@ For further details in regards with this test, please see [PROBLEM.MD]
 
 ## Environment
 - PHP 7.1.7
+- PHPUnit 6.5.7 by Sebastian Bergmann and contributors.
 - \[optional\]Xdebug installed/enabled (for phpunit to generate test coverage reports)
 
 

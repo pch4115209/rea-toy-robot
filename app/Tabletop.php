@@ -19,8 +19,8 @@ class Tabletop
             throw new InvalidArgumentException("Error: Both width and height have to be a positive integer.");
         }
 
-        $this->upperX = $x - 1;
-        $this->upperY = $y - 1;
+        $this->upperX = $x - 1;// First index starts from 0, so
+        $this->upperY = $y - 1;// the largest valid index will width - 1 or height - 1
     }
 
     /**

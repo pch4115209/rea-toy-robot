@@ -12,11 +12,12 @@ class RobotTest extends TestCase
     public function setUp()
     {
         $this->robot = new Robot();
+        $this->robot->on(new Tabletop(5,5));
     }
 
     public function testConstructor()
     {
-        assertInstanceOf(Robot::class, $this->robot);
+        $this->assertInstanceOf(Robot::class, $this->robot);
     }
 
     /**
@@ -34,7 +35,7 @@ class RobotTest extends TestCase
     {
         // PLACE robot to a proper position
         $this->robot->place("PLACE 1,2,NORTH");
-        self::assertEquals('1,2,NORTH', $this->robot->report());
+        $this->assertEquals('1,2,NORTH', $this->robot->report());
     }
 
     /**

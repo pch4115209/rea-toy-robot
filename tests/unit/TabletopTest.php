@@ -23,8 +23,8 @@ class TabletopTest extends TestCase
 
     public function testException()
     {
-        $tabletop = new Tabletop('a','b');
         $this->expectException(InvalidArgumentException::class);
+        $tabletop = new Tabletop('a','b');
     }
 
 

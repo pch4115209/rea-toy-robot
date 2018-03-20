@@ -21,20 +21,34 @@ class TabletopTest extends TestCase
 
     /**
      * @covers Tabletop:isPlaceable
+     *
      */
-    public function testIsPlaceale()
+    public function testIsPlacebale()
     {
-        //Go through every valid coordinates in this 5x5 tabletop
         for($i = 0; $i < 5; $i++){
             for($j = 0; $j < 5; $j++){
                 $this->assertTrue($this->tabletop->isPlaceable($i,$j));
             }
         }
 
+        // Invalid coordinates
         $this->assertFalse($this->tabletop->isPlaceable(0,-1));
         $this->assertFalse($this->tabletop->isPlaceable(-1,0));
+        $this->assertFalse($this->tabletop->isPlaceable(-1,-1));
         $this->assertFalse($this->tabletop->isPlaceable(5,0));
         $this->assertFalse($this->tabletop->isPlaceable(0,5));
+        $this->assertFalse($this->tabletop->isPlaceable(-5,5));
+        $this->assertFalse($this->tabletop->isPlaceable(0,100));
+        $this->assertFalse($this->tabletop->isPlaceable('',''));
+        $this->assertFalse($this->tabletop->isPlaceable('a','b'));
+        $this->assertFalse($this->tabletop->isPlaceable('c','d'));
+        $this->assertFalse($this->tabletop->isPlaceable(null,null));
+
+        //Extreme case
+        $this->assertFalse($this->tabletop->isPlaceable(0,PHP_INT_MAX));
+        $this->assertFalse($this->tabletop->isPlaceable(PHP_INT_MAX,O));
+
     }
+
 
 }

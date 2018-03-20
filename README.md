@@ -16,7 +16,7 @@ For further details in regards with this test, please see [PROBLEM.MD]
 ## Environment
 - PHP 7.1.7
 - PHPUnit 6.5.7 by Sebastian Bergmann and contributors.
-- \[optional\]Xdebug installed/enabled (for phpunit to generate test coverage reports)
+- [optional]Xdebug installed/enabled (for phpunit to generate test coverage reports)
 
 
 ## Constraints 
@@ -31,9 +31,16 @@ For further details in regards with this test, please see [PROBLEM.MD]
 - Any input commands having spaces in between will be treated invalid and ignored (e.g. PLACE 1 ,  2, NORTH).
 
 
+## Design
+### Activity Diagram
+![Activity Diagram for Toy Robot](https://github.com/pch4115209/rea-toy-robot/blob/master/docs/UML/Toy%20Robot%20Activity%20Diagrams%20v1.png)
+
+### Class Diagram
+![Class Diagram for Toy Robot]()
+
 ## Example Usage
 
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job.)
 
-[PROBLEM.MD]: <https://example.com.au>
+[PROBLEM.MD]: <https://github.com/pch4115209/rea-toy-robot/blob/master/PROBLEM.md>

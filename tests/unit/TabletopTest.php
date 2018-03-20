@@ -1,4 +1,5 @@
 <?php
+require_once 'app/Tabletop.php';
 
 use PHPUnit\Framework\TestCase;
 
@@ -14,13 +15,21 @@ class TabletopTest extends TestCase
         $this->tabletop = new Tabletop(5,5);
     }
 
+
     public function testConstructor()
     {
         $this->assertInstanceOf("Tabletop", $this->tabletop);
     }
 
+    public function testException()
+    {
+        $tabletop = new Tabletop('a','b');
+        $this->expectException(InvalidArgumentException::class);
+    }
+
+
     /**
-     * @covers Tabletop:isPlaceable
+     * @covers Tabletop::isPlaceable
      *
      */
     public function testIsPlacebale()

@@ -36,7 +36,7 @@ For further details in regards with this test, please see [PROBLEM.MD]
 ![Activity Diagram for Toy Robot](https://github.com/pch4115209/rea-toy-robot/blob/master/docs/UML/Toy%20Robot%20Activity%20Diagrams%20v1.png)
 
 ### Class Diagram
-![Class Diagram for Toy Robot]()
+![Class Diagram for Toy Robot](https://github.com/pch4115209/rea-toy-robot/blob/master/docs/UML/Toy%20Robot%20Class%20Diagrams%20v1.1.png)
 
 ## Example Usage
 

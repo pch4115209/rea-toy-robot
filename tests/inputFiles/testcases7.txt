@@ -1,0 +1,19 @@
+place 1,2,3
+move
+move
+move
+dafasdfdfa
+
+left
+left
+
+RIGHT
+left
+
+right
+
+move
+MOVE
+
+
+REPORT

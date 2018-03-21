@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 
 class TabletopTest extends TestCase
 {
-    //private $tabletop;
+    private $tabletop;
 
     /**
      * setUp() will be called before each test method
@@ -55,7 +55,7 @@ class TabletopTest extends TestCase
 
         // Extreme case
         $this->assertFalse($this->tabletop->isPlaceable(0,PHP_INT_MAX));
-        $this->assertFalse($this->tabletop->isPlaceable(PHP_INT_MAX,O));
+        $this->assertFalse($this->tabletop->isPlaceable(PHP_INT_MAX,0));
 
     }
 

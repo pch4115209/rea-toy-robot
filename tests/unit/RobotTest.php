@@ -40,7 +40,7 @@ class RobotTest extends TestCase
 
     /**
      * @covers Robot::place
-     * depends testReport
+     * @depends testReport
      */
     public function testPlace()
     {
@@ -74,7 +74,7 @@ class RobotTest extends TestCase
 
     /**
      * @covers Robot::place
-     * depends testReport
+     * @depends testReport
      */
     public function testPlaceInvalidPlace(){
         // Invalid PLACE - case-sensitivity
@@ -100,7 +100,7 @@ class RobotTest extends TestCase
 
     /**
      * @covers Robot::left
-     * depends testPlace
+     * @depends testPlace
      */
     public function testLeft()
     {

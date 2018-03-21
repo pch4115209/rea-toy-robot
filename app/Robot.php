@@ -131,8 +131,9 @@ class Robot
     public function report()
     {
         if ($this->isPlaced) {
-            return $this->x.','.$this->y.','.$this->face;
+            return $this->x.','.$this->y.','.$this->face ."\n";
         }
+
     }
 
 

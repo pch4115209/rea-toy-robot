@@ -70,6 +70,13 @@ class RobotTest extends TestCase
         $this->robot->place("PLACE 3,2,EAST\n\n");
         $this->assertEquals('3,2,EAST',$this->robot->report());
 
+    }
+
+    /**
+     * @covers Robot::place
+     * depends testReport
+     */
+    public function testPlaceInvalidPlace(){
         // Invalid PLACE - case-sensitivity
         $this->robot->place("pLACE 1,0,SOUTH");
         $this->assertNull($this->robot->report());
@@ -89,7 +96,6 @@ class RobotTest extends TestCase
         // Invalid PLACE - out of tabletop 5x5
         $this->robot->place("PLACE 5,6,NORTH");
         $this->assertNull($this->robot->report());
-
     }
 
     /**
@@ -154,8 +160,8 @@ class RobotTest extends TestCase
         $this->assertEquals('2,4,NORTH',$this->robot->report());
 
         // Continue moving towards NORTH
-        $this->robot->right();
-        $this->assertEquals('2,4,WEST',$this->robot->report());
+        $this->robot->move();
+        $this->assertEquals('2,4,NORTH',$this->robot->report());
 
         // Move towards negative coordinates
         $this->robot->place("PLACE 0,0,SOUTH");

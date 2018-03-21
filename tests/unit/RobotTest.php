@@ -35,7 +35,7 @@ class RobotTest extends TestCase
     {
         // PLACE robot to a proper position
         $this->robot->place("PLACE 1,2,NORTH");
-        $this->assertEquals('1,2,NORTH', $this->robot->report());
+        $this->assertEquals('1,2,NORTH'."\n", $this->robot->report());
     }
 
     /**
@@ -46,29 +46,29 @@ class RobotTest extends TestCase
     {
         // Valid PLACE - four facings
         $this->robot->place("PLACE 1,0,NORTH");
-        $this->assertEquals('1,0,NORTH',$this->robot->report());
+        $this->assertEquals('1,0,NORTH'."\n", $this->robot->report());
         $this->robot->place("PLACE 1,0,WEST");
-        $this->assertEquals('1,0,WEST',$this->robot->report());
+        $this->assertEquals('1,0,WEST'."\n", $this->robot->report());
         $this->robot->place("PLACE 1,0,EAST");
-        $this->assertEquals('1,0,EAST',$this->robot->report());
+        $this->assertEquals('1,0,EAST'."\n", $this->robot->report());
         $this->robot->place("PLACE 1,0,SOUTH");
-        $this->assertEquals('1,0,SOUTH',$this->robot->report());
+        $this->assertEquals('1,0,SOUTH'."\n", $this->robot->report());
 
         // Valid PLACE with leading spaces
         $this->robot->place("  PLACE 1,0,WEST");
-        $this->assertEquals('1,0,WEST',$this->robot->report());
+        $this->assertEquals('1,0,WEST'."\n", $this->robot->report());
 
         // Valid PLACE with leading and trailing spaces
         $this->robot->place("  PLACE 1,0,SOUTH   ");
-        $this->assertEquals('1,0,SOUTH',$this->robot->report());
+        $this->assertEquals('1,0,SOUTH'."\n", $this->robot->report());
 
         // Valid PLACE with a linebreak
         $this->robot->place("PLACE 1,0,SOUTH\n");
-        $this->assertEquals('1,0,SOUTH',$this->robot->report());
+        $this->assertEquals('1,0,SOUTH'."\n", $this->robot->report());
 
         // Valid PLACE with a linebreak
         $this->robot->place("PLACE 3,2,EAST\n\n");
-        $this->assertEquals('3,2,EAST',$this->robot->report());
+        $this->assertEquals('3,2,EAST'."\n", $this->robot->report());
 
     }
 
@@ -106,16 +106,16 @@ class RobotTest extends TestCase
     {
         $this->robot->place("PLACE 1,2,WEST");
         $this->robot->left();
-        $this->assertEquals('1,2,SOUTH',$this->robot->report());
+        $this->assertEquals('1,2,SOUTH'."\n", $this->robot->report());
 
         $this->robot->left();
-        $this->assertEquals('1,2,EAST',$this->robot->report());
+        $this->assertEquals('1,2,EAST'."\n", $this->robot->report());
 
         $this->robot->left();
-        $this->assertEquals('1,2,NORTH',$this->robot->report());
+        $this->assertEquals('1,2,NORTH'."\n", $this->robot->report());
 
         $this->robot->left();
-        $this->assertEquals('1,2,WEST',$this->robot->report());
+        $this->assertEquals('1,2,WEST'."\n", $this->robot->report());
     }
 
     /**
@@ -127,16 +127,16 @@ class RobotTest extends TestCase
 
         $this->robot->place("PLACE 1,2,WEST");
         $this->robot->right();
-        $this->assertEquals('1,2,NORTH',$this->robot->report());
+        $this->assertEquals('1,2,NORTH'."\n", $this->robot->report());
 
         $this->robot->right();
-        $this->assertEquals('1,2,EAST',$this->robot->report());
+        $this->assertEquals('1,2,EAST'."\n", $this->robot->report());
 
         $this->robot->right();
-        $this->assertEquals('1,2,SOUTH',$this->robot->report());
+        $this->assertEquals('1,2,SOUTH'."\n", $this->robot->report());
 
         $this->robot->right();
-        $this->assertEquals('1,2,WEST',$this->robot->report());
+        $this->assertEquals('1,2,WEST'."\n", $this->robot->report());
 
     }
 
@@ -153,34 +153,34 @@ class RobotTest extends TestCase
         // Valid command
         $this->robot->place("PLACE 2,2,NORTH");
         $this->robot->move();
-        $this->assertEquals('2,3,NORTH',$this->robot->report());
+        $this->assertEquals('2,3,NORTH'."\n", $this->robot->report());
 
         // Keep moving to NORTH
         $this->robot->move();
-        $this->assertEquals('2,4,NORTH',$this->robot->report());
+        $this->assertEquals('2,4,NORTH'."\n", $this->robot->report());
 
         // Continue moving towards NORTH
         $this->robot->move();
-        $this->assertEquals('2,4,NORTH',$this->robot->report());
+        $this->assertEquals('2,4,NORTH'."\n", $this->robot->report());
 
         // Move towards negative coordinates
         $this->robot->place("PLACE 0,0,SOUTH");
         $this->robot->move();
-        $this->assertEquals('0,0,SOUTH',$this->robot->report());
+        $this->assertEquals('0,0,SOUTH'."\n", $this->robot->report());
 
         $this->robot->place("PLACE 0,0,WEST");
         $this->robot->move();
-        $this->assertEquals('0,0,WEST',$this->robot->report());
+        $this->assertEquals('0,0,WEST'."\n", $this->robot->report());
 
         // Move out of tabletop
         $this->robot->place("PLACE 4,0,EAST");
         $this->robot->move();
-        $this->assertEquals('4,0,EAST',$this->robot->report());
+        $this->assertEquals('4,0,EAST'."\n", $this->robot->report());
 
         // Move out of tabletop
         $this->robot->place("PLACE 3,4,NORTH");
         $this->robot->move();
-        $this->assertEquals('3,4,NORTH',$this->robot->report());
+        $this->assertEquals('3,4,NORTH'."\n", $this->robot->report());
 
     }
 

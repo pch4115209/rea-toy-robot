@@ -72,6 +72,9 @@ class Simulator
         return;
     }
 
+    /**
+     * Initialise Robot object
+     */
     private function __initRobot(){
         $tabletop = new Tabletop(5,5);
         $this->robot = new Robot();

@@ -18,6 +18,32 @@ For further details in regards with this test, please see [PROBLEM.MD]
 - PHPUnit 6.5.7 by Sebastian Bergmann and contributors.
 - [optional]Xdebug installed/enabled (for phpunit to generate test coverage reports)
 
+## Example Usage
+### To run the toy robot as follows:
+Please cd to rea-toy-robot folder, where you can find **main.php**.
+
+```sh
+php main.php {pathToFile1.txt} {pathToFile2.txt} ...
+```
+E.g.
+```sh
+php main.php tests/inputFiles/testcase1.txt tests/inputFiles/testcase2.txt
+```
+
+### To run test as follows:
+```sh
+php phpunit-6.5.phar tests
+```
+
+#### Run all unit tests at once:
+```sh
+php phpunit-6.5.phar tests/unit
+```
+
+#### Run the integration test:
+```sh
+php phpunit-6.5.phar tests/integration
+```
 
 ## Constraints 
 - The toy robot must not fall off the table during movement. This also
@@ -38,7 +64,7 @@ For further details in regards with this test, please see [PROBLEM.MD]
 ### Class Diagram
 ![Class Diagram for Toy Robot](https://github.com/pch4115209/rea-toy-robot/blob/master/docs/UML/Toy%20Robot%20Class%20Diagrams%20v1.1.png)
 
-## Example Usage
+
 
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job.)

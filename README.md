@@ -50,6 +50,10 @@ php phpunit-6.5.phar tests/integration
 php phpunit-6.5.phar tests --coverage-html docs\coverage-report --whitelist=app
 ```
 
+## Test Coverage Overview
+![Test Coverage Overview](https://github.com/pch4115209/rea-toy-robot/blob/master/docs/coverage-report/Coverage%20Overview.PNG)
+To view more [details] in HTML format (Open in any browser for better user experience).
+
 
 ## Constraints 
 - The toy robot must not fall off the table during movement. This also
@@ -77,3 +81,4 @@ php phpunit-6.5.phar tests --coverage-html docs\coverage-report --whitelist=app
 
 [PROBLEM.MD]: <https://github.com/pch4115209/rea-toy-robot/blob/master/PROBLEM.md>
 [Xdebug]: <https://xdebug.org/docs/install>
+[details]: <https://github.com/pch4115209/rea-toy-robot/tree/master/docs/coverage-report>

@@ -29,6 +29,10 @@ E.g.
 ```sh
 php main.php tests/inputFiles/testcase1.txt tests/inputFiles/testcase2.txt
 ```
+### To interact with Command I/O as follows:
+```sh
+php main2.php
+```
 
 ### To run test as follows:
 ```sh

@@ -14,9 +14,9 @@ For further details in regards with this test, please see [PROBLEM.MD]
 
 
 ## Environment
-- PHP 7.1.7
+- PHP 7.*
 - PHPUnit 6.5.7 by Sebastian Bergmann and contributors.
-- [optional]Xdebug installed/enabled (for phpunit to generate test coverage reports)
+- (optional)[Xdebug] v2.5.5 installed/enabled (for phpunit to generate test coverage reports)
 
 ## Example Usage
 ### To run the toy robot as follows:
@@ -45,6 +45,12 @@ php phpunit-6.5.phar tests/unit
 php phpunit-6.5.phar tests/integration
 ```
 
+### To generate test coverage report (*Xdebug must be installed and enabled*):
+```sh
+php phpunit-6.5.phar tests --coverage-html docs\coverage-report --whitelist=app
+```
+
+
 ## Constraints 
 - The toy robot must not fall off the table during movement. This also
   includes the initial placement of the toy robot.
@@ -70,3 +76,4 @@ php phpunit-6.5.phar tests/integration
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job.)
 
 [PROBLEM.MD]: <https://github.com/pch4115209/rea-toy-robot/blob/master/PROBLEM.md>
+[Xdebug]: <https://xdebug.org/docs/install>

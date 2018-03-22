@@ -14,7 +14,11 @@ class Simulator
         $this->commandParser = new CommandParser();
     }
 
-
+    /**
+     * Read in file names
+     *
+     * @param array $argv
+     */
     public function run($argv)
     {
         // No input file

@@ -24,7 +24,7 @@ class Simulator
         // No input file
         if( !isset($argv[1]) )
         {
-            throw new InvalidArgumentException('At least one input file required.');
+            throw new InvalidArgumentException('Oops! At least one input file is required.');
         }
 
         // Iterate input files

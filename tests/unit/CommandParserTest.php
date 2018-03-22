@@ -14,7 +14,7 @@ class CommandParserTest extends TestCase
         $this->commandParser = new CommandParser();
     }
 
-    public function testContructor()
+    public function testConstructor()
     {
         $this->assertInstanceOf("CommandParser", $this->commandParser);
     }

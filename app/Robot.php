@@ -134,6 +134,7 @@ class Robot
             return $this->x.','.$this->y.','.$this->face ."\n";
         }
 
+        return;
     }
 
 
